@@ -1,204 +1,165 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Register now for our programming course.">
     <title>Student Registration</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>Student Registration</h1>
-        <p>Register now for our programming course.</p>
-    </header>
+    <h1>Student Registration</h1>
 
-    <main>
+    <p>Register now for our programming course.</p>
 
-        <figure>
-            <img
-                src="image.png"
-                alt="Programming Course"
-                width="400"
-                loading="lazy"
-            >
-        </figure>
+    <img src="image.png" alt="Programming Course" width="400">
 
-        <section aria-labelledby="form-title">
+    <h2>Registration Form</h2>
 
-            <h2 id="form-title">Registration Form</h2>
+    <form>
 
-            <form action="#" method="post" enctype="multipart/form-data">
+        <!-- Full Name -->
+        <label for="name">Full Name:</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+        <br><br>
 
-                <!-- Personal Information -->
-                <fieldset>
-                    <legend>Personal Information</legend>
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+        >
+        <br><br>
 
-                    <p>
-                        <label for="name">Full Name:</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Enter your full name"
-                            autocomplete="name"
-                            required
-                        >
-                    </p>
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+        >
+        <br><br>
 
-                    <p>
-                        <label for="age">Age:</label>
-                        <input
-                            type="number"
-                            id="age"
-                            name="age"
-                            placeholder="Enter your age"
-                            min="10"
-                            max="100"
-                            required
-                        >
-                    </p>
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Enter your age"
+            required
+        >
+        <br><br>
 
-                    <p>
-                        <label for="birthdate">Birth Date:</label>
-                        <input
-                            type="date"
-                            id="birthdate"
-                            name="birthdate"
-                            autocomplete="bday"
-                            required
-                        >
-                    </p>
+        <!-- Birth Date -->
+        <label for="birthdate">Birth Date:</label>
+        <input
+            type="date"
+            id="birthdate"
+            name="birthdate"
+            required
+        >
+        <br><br>
 
-                    <fieldset>
-                        <legend>Gender</legend>
+        <!-- Phone -->
+        <label for="phone">Phone Number:</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="06XXXXXXXX"
+        >
+        <br><br>
 
-                        <input type="radio" id="male" name="gender" value="male" required>
-                        <label for="male">Male</label>
+        <!-- Favorite Color -->
+        <label for="color">Favorite Color:</label>
+        <input
+            type="color"
+            id="color"
+            name="color"
+        >
+        <br><br>
 
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
-                    </fieldset>
+        <!-- Course -->
+        <label for="course">Choose a Course:</label>
 
-                    <p>
-                        <label for="color">Favorite Color:</label>
-                        <input
-                            type="color"
-                            id="color"
-                            name="color"
-                            value="#000000"
-                        >
-                    </p>
-                </fieldset>
+        <select id="course" name="course" required>
+            <option value="">-- Choose a course --</option>
+            <option value="html">HTML & CSS</option>
+            <option value="python">Python Programming</option>
+            <option value="javascript">JavaScript</option>
+        </select>
 
-                <!-- Account Information -->
-                <fieldset>
-                    <legend>Account Information</legend>
+        <br><br>
 
-                    <p>
-                        <label for="email">Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="example@email.com"
-                            autocomplete="email"
-                            required
-                        >
-                    </p>
+        <!-- Gender -->
+        <p>Gender:</p>
 
-                    <p>
-                        <label for="phone">Phone Number:</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="06XXXXXXXX"
-                            pattern="0[5-7][0-9]{8}"
-                            title="Enter a 10-digit phone number starting with 05, 06, or 07"
-                            autocomplete="tel"
-                        >
-                    </p>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
 
-                    <p>
-                        <label for="password">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Enter your password"
-                            minlength="8"
-                            autocomplete="new-password"
-                            required
-                        >
-                    </p>
-                </fieldset>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
 
-                <!-- Course Information -->
-                <fieldset>
-                    <legend>Course Information</legend>
+        <br><br>
 
-                    <p>
-                        <label for="course">Choose a Course:</label>
-                        <select id="course" name="course" required>
-                            <option value="">-- Choose a course --</option>
-                            <option value="html">HTML &amp; CSS</option>
-                            <option value="python">Python Programming</option>
-                            <option value="javascript">JavaScript</option>
-                        </select>
-                    </p>
+        <!-- Skills -->
+        <p>Skills:</p>
 
-                    <fieldset>
-                        <legend>Skills</legend>
+        <input type="checkbox" id="html-skill" name="skills" value="html">
+        <label for="html-skill">HTML</label>
 
-                        <input type="checkbox" id="html-skill" name="skills" value="html">
-                        <label for="html-skill">HTML</label>
+        <input type="checkbox" id="css-skill" name="skills" value="css">
+        <label for="css-skill">CSS</label>
 
-                        <input type="checkbox" id="css-skill" name="skills" value="css">
-                        <label for="css-skill">CSS</label>
+        <input type="checkbox" id="python-skill" name="skills" value="python">
+        <label for="python-skill">Python</label>
 
-                        <input type="checkbox" id="python-skill" name="skills" value="python">
-                        <label for="python-skill">Python</label>
-                    </fieldset>
+        <br><br>
 
-                    <p>
-                        <label for="message">Message:</label>
-                        <br>
-                        <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Write your message here..."
-                            rows="5"
-                            cols="40"
-                            maxlength="500"
-                        ></textarea>
-                    </p>
+        <!-- Message -->
+        <label for="message">Message:</label>
+        <br>
 
-                    <p>
-                        <label for="cv">Upload your CV:</label>
-                        <input
-                            type="file"
-                            id="cv"
-                            name="cv"
-                            accept=".pdf,.doc,.docx"
-                        >
-                    </p>
-                </fieldset>
+        <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            rows="5"
+            cols="40"
+        ></textarea>
 
-                <!-- Buttons -->
-                <p>
-                    <button type="submit">Register</button>
-                    <button type="reset">Reset</button>
-                </p>
+        <br><br>
 
-            </form>
+        <!-- CV -->
+        <label for="cv">Upload your CV:</label>
+        <input
+            type="file"
+            id="cv"
+            name="cv"
+        >
 
-        </section>
+        <br><br>
 
-    </main>
+        <!-- Buttons -->
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
 
 </body>
 
 </html>
+
